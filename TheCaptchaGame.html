@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The captcha game.</title>
+</head>
+<body>
+    <div id="Level1TheCheckbox" style="font-family: Arial, Helvetica, sans-serif; transition: all 0.5s ease;">
+        <p id="LVL1NAME" style="position: absolute; top: 0%; left: 44%;">Level 1: The checkbox</p>
+        <img src="Images/Captcha logo.png" id="LVL1CaptchaLogo" style="position: absolute; top: 30%; left: 47%;"></img>
+        <p id="LVL1TXT" style="position: absolute; top: 35%; left: 42%;">I'm not a robot.</p>
+        <input type="checkbox" id="LVL1CHECKBOX" style="transform: scale(3); position: absolute; top: 36.6%; left: 38%;">
+
+    </div>
+
+    <div id = "Level2TheRandomLetters" style="font-family: Arial, Helvetica, sans-serif; opacity: 0; transition: all 0.5s ease;">
+        <p id="LVL2NAME" style="position: absolute; top: 0%; left: 44%;">Level 2: The random letters</p>
+        <img src="Images/Captcha logo.png" id="LVL2CaptchaLogo" style="position: absolute; top: 30%; left: 50%;"></img>
+        <p id="LVL2TXT" style="position: absolute; top: 35%; left: 40%;">Type the following characters:</p>
+        <p id="LVL2CHARACTERS" style="position: absolute; top: 37%; left: 45%; font-size: 24px; letter-spacing: 5px;">______</p>
+        <input type="text" id="LVL2INPUT" style="transform: scale(1.5); position: absolute; top: 45%; left: 42%;">
+        <button id="LVL2SUMBIT" style="background-color: cyan; position: absolute; top: 50%; left: 55%; transform: translate(-50%, -50%);">Sumbit</button>
+
+    </div>
+
+    <h1 style="
+    font-family: Arial, Helvetica, sans-serif; 
+    position: absolute; 
+    justify-content: center; 
+    align-content: center; 
+    align-self: center; 
+    justify-self: center; 
+    top: 30%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    " id="victory">Nice. Keep it up. 👍</h1>
+
+    <script>
+        const victory = document.getElementById("victory")
+        const lvl1 = document.getElementById("Level1TheCheckbox")
+        const lvl1name = document.getElementById("LVL1NAME")
+        const lvl1captcha = document.getElementById("LVL1CaptchaLogo")
+        const lvl1txt = document.getElementById("LVL1TXT")
+        const lvl1checkbox = document.getElementById("LVL1CHECKBOX")
+        const lvl2 = document.getElementById("Level2TheRandomLetters")
+        const lvl2name = document.getElementById("LVL2NAME")
+        const lvl2captcha = document.getElementById("LVL2CaptchaLogo")
+        const lvl2txt = document.getElementById("LVL2TXT")
+        const lvl2characters = document.getElementById("LVL2CHARACTERS")
+        const lvl2btn = document.getElementById("LVL2SUMBIT")
+        const lvl2INPUT = document.getElementById("LVL2INPUT")
+
+        function victoryShow() {
+            victory.style.opacity = "1"
+        }
+
+        function hideLVL(level) {
+            if (level === 1) {
+                lvl1.style.opacity = "0"
+            } else if (level === 2) {
+                lvl2.style.opacity = "0"
+            }
+        }
+
+        function showLVL(level) {
+            if (level === 1) {
+                setTimeout(() => {
+                    lvl1.style.opacity = "1"
+                }, 500);
+            } else if (level === 2) {
+                setTimeout(() => {
+                    lvl2.style.opacity = "1"
+                }, 500);
+            }
+        }
+
+        function getRandomString(length) {
+            var result = "";
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < length; i++) {
+                var string = Math.floor(Math.random() * characters.length);
+                result += characters[string];
+            }
+
+            return result
+        }
+
+        function hideVictory() {
+            victory.style.opacity = "0"
+        }
+
+        
+        lvl1checkbox.addEventListener("change", function() {
+            if (lvl1checkbox.checked) {
+                hideLVL(1)
+                setTimeout(() => {
+                    victoryShow()
+                }, 500);
+
+                setTimeout(() => {
+                    hideVictory()
+                }, 1500);
+
+                setTimeout(() => {
+                    lvl2characters.textContent = getRandomString(6)
+                    showLVL(2)
+                }, 2000);
+
+
+            }
+        })
+
+        lvl2btn.addEventListener("click", function() {
+            if (lvl2characters.textContent === lvl2INPUT.value) {
+                hideLVL(2)
+                setTimeout(() => {
+                    victoryShow()
+                }, 500);
+
+                setTimeout(() => {
+                    hideVictory()
+                }, 1500);
+            }
+        })
+        
+    </script>
+</body>
+</html>
