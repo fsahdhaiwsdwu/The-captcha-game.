@@ -6,26 +6,41 @@
     <title>The captcha game.</title>
 </head>
 <body>
-    <div id="Level1TheCheckbox" style="font-family: Arial, Helvetica, sans-serif; transition: all 0.5s ease;">
+    <div id="Level1TheCheckbox" style="font-family: Arial, Helvetica, sans-serif; opacity: 1; transition: all 0.5s ease; user-select: none; -webkit-user-select: none; -ms-user-select: none;">
         <p id="LVL1NAME" style="position: absolute; top: 0%; left: 44%;">Level 1: The checkbox</p>
         <img src="data:image/png;base64,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" id="LVL1CaptchaLogo" style="position: absolute; top: 30%; left: 47%;"></img>
         <p id="LVL1TXT" style="position: absolute; top: 35%; left: 42%;">I'm not a robot.</p>
-        <input type="checkbox" id="LVL1CHECKBOX" style="transform: scale(3); position: absolute; top: 36.6%; left: 38%;">
-
+        <input type="checkbox" id="LVL1CHECKBOX" style="transform: scale(3); position: absolute; top: 36.6%; left: 38%;"> 
+        
     </div>
 
-    <div id = "Level2TheRandomLetters" style="font-family: Arial, Helvetica, sans-serif; opacity: 0; transition: all 0.5s ease;">
+    <div id="Level2TheRandomLetters" style="display: none; font-family: Arial, Helvetica, sans-serif; opacity: 0; transition: all 0.5s ease; user-select: none; -webkit-user-select: none; -ms-user-select: none;">
         <p id="LVL2NAME" style="position: absolute; top: 0%; left: 44%;">Level 2: The random letters</p>
         <img src="data:image/png;base64,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" id="LVL2CaptchaLogo" style="position: absolute; top: 30%; left: 50%;"></img>
         <p id="LVL2TXT" style="position: absolute; top: 35%; left: 40%;">Type the following characters:</p>
         <p id="LVL2CHARACTERS" style="position: absolute; top: 37%; left: 45%; font-size: 24px; letter-spacing: 5px;">______</p>
-        <input type="text" id="LVL2INPUT" style="transform: scale(1.5); position: absolute; top: 45%; left: 42%;">
-        <button id="LVL2SUMBIT" style="background-color: cyan; position: absolute; top: 50%; left: 55%; transform: translate(-50%, -50%);">Sumbit</button>
+        <input type="text" id="LVL2INPUT" style="transform: scale(1.5); position: absolute; top: 45%; left: 42%; border: 1px; border-style: solid; border-radius: 8px;">
+        <button id="LVL2SUMBIT" style="background-color: cyan; position: absolute; top: 50%; left: 55%; transform: translate(-50%, -50%); border: 1px; border-style: solid; border-radius: 8px;">Sumbit</button>
 
+    </div>
+
+    <div id="Level3DoubleCaptcha" style="display: none; font-family: Arial, Helvetica, sans-serif; opacity: 0; transition: all 0.5s ease; user-select: none; -webkit-user-select: none; -ms-user-select: none;">
+        <p id="LVL3NAME" style="position: absolute; top: 0%; left: 50%; transform: translate(-50%, -50%);">Level 3: Double captcha</p>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAACUCAMAAAA3b0xFAAAAw1BMVEX///+rq6tChfQcOqn2+f6ZuPjDw8MufPNxfcEIMKaoqKilpaVGjfywraYeP60sgPwALKVkcrzz8/MAcPK1tbW8vLzo8P1ebbvd3d3o6OgAJaTx9f4jePMUNqhpd76fn58AHaKJr/jE1vtRZLjS0tKFjsnKzubV2ew+U7EADqDBxeJkmPbn6fQAAJt6pPaowvmaodGordezuNtNWrQ2Q6xHTrDU4fxvn/eRmM2yyfkAavJUjvTg6f24vMPJzti9xNKepbKbFSBiAAAGNUlEQVR4nO3aa3OiSBQGYAiIArMzBgEVNGq8YAyJuZhkspmZzP//VdugRtGGPifBbtji/ZAqq5Tw2N2nLyhJVapUqVKlSpXSR0XHj/+Kvm9WLkc1XEajKcnd/cNiFoS+6NtPjXvbquNypnueNxxeXfXn7endwywUTaDHv+2dofLtu7JOX296Q31+Pn0oJM0d4WAfro2u6X1/bNwXkIaEHbii6LqyagSiHUfxR/WvuUir9fXhaiEachgUjOqKbVf9h4LVfwws1RXJ5otilX4ELMOlKM3hxSKrzbirfXDxyHQpiqf8TK8gwR1H0joqFMZwKf3h+CHlf4Tzc66mONAWY7lIZ1Sm1P4WPg0bvFUSGMZ2kbl6TOmL4VNTF+ECFg+AizRZ/2gyIyxFiEt9BdVEkIuU/PtkXQwePUWIy6/lNb7WuUkMsmBMWCJc4EIPdSlXjR1szRLgcsHbFbBLGTa2q/wNi7/Lv81nvZGMt4EF8zWLuyun9eFRmnFXDFdNRYyrlsd6ntpiU5Ww9O1Lzq4lZmOJcinD+2DH4uy6xGwrkS6l7+1YfF3PGBXalQhPl3+Naq7SuFCHG+VxXSKPD0vi8pGqsrhu/5+uSzTr7Ftf1/v9fqFd/guyaERpXIzn81W/qeNtvFyveNVZi3wuDBZ3jfZqf8otksv9THO1truq8OHn2GuyMfxdsI1/moskuG+j2oyPy4VvulJcUaOtPHiB5OOCrXdbb8mZu3VwNuhPb4rlgu2Re69S8kDn0CVJsxtoX+TiegasoOpvLnnncv8LOHZJ1rwJq/k8XCpgwVt/ceO31rJdUngOazEeLsjK8NbdfAd7MJpLCi9AszQPF2Ahv2UR2DLbJYVtSIvxcLHn5Gt39271Y4zRXVI4B8A4uFRmc9V/Jd6/bG1cLv2CM68QLmY1JAU+mVor0yXdsWEcXKxqWL8++sj6OC7VFQyL4GL1wh7l8Xc8xlL7IZvFweUymqu3pHworooprplSiLrBXBtSq14E61Fdi6di1PkRq7nov8IgMGp7LZ5AG7HTu64ZzfUr5XPq8l+KC8ji4HrLVNVHqT+MUWvHZNDY4uJys129y/SPHnfQGXjPfHIX41nD2zPiWsEN+GDq5K7sg6j6KG3upWR2BVVxcC2zXTX4lRaYI9KTu2rZrsOlYXoWq0KdRzGmL7ALWuCL4XrLKIeJLFYFOxfNfozykjYrH2She3oTHl33Tv37w5cf9Xr9R0p6L7Cfqwar+eN4k/Ym55tcRDn/SLsdvelxPj2xy/knM+ZRBgPrxLeUSxxDRsWQS8GSfuNcht0Vfcew4NqrNCxJw7jKw0K5DLscYysKylUeFsY1EH2vmIBdhiz6VlGBuso0tqIAXWVjAV2GU5oCvwnIVaJ5axuIq3SdUAK2F5ol/osAuEz0RW1TOAzgMjTkNSembDqCYaDx1UFd0oouKRoGcsmYcmjZ8SUFw3Kv89Z2RycWBpyXwXXA2l1QaPHIeR1l7e+/Rc574HUvaIxZcuJyAmHw/ZfJLvedweG34XAgUIPYVzLHi3bIiooHH8bxvWDOAcxJuszqyCa1lcV0RdR5FLnzSZd6n1ZHM+lXEgTDuSKZdkSzuhPHoDWWQBjWRXqjYTvapLPGWcSkOXZKW21gIsYY3hXJDEO2bdtxyB+bvGS93y6Ha6czmCZRsM+7MOEP4+MiEzTn4sHJRTanfGG8XLxh3Fyc92McXVwbLOE6pZHznmXPZdjqn+MVeV4sGXf4k58rnmPeU5d55WLtXOupU30/SV/kzvpwbXe2PvKHDzCWMeHM2rp2s4v/O/euaCAPVvNz7U+a/nvOxUMEa+1KrgVyroom97G1dR0uStU/f/MbZKaYZ4LERTkMC3ODiTrN1gzqGV/4G7ZjZERAIdxESzt9mNhfhxm2iKEVR0s9VOlqX2wyQxZ0dhilk/GvJ84XpjLDdIQ1FivWhHqGC4lpZ5wNi09XMz8jM41Cq6JY2gArMweFV8VJO3qnxjBNUbUdn44N2kxHBbS41YIaa+LYmce7hmHKtlOODphM/ISBdLNDHXltRiatjKh1rG4nwpHSsIss29rH85Uyx7K63c4u3a5VelKVKlWqVKlSpUqVKlWqVKlSzvwH3J+s7xLsxksAAAAASUVORK5CYII=" id="LVL3CaptchaLogo1" style="position: absolute; top: 50%; left: 70%; transform: translate(-50%, -50%);"></img>
+        <img src="data:image/png;base64,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" id="LVL3CaptchaLogo2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></img>
+        <p id="LVL3TXT1" style="position: absolute; top: 47%; left: 43%; transform: translate(-50%, -50%);">I'm not a robot.</p>
+        <input type="checkbox" id="LVL3CHECKBOX" style="transform: scale(3); position: absolute; top: 48%; left: 38%;"></input>
+        <p id="LVL3TXT2" style="position: absolute; top: 45%; left: 60%; transform: translate(-50%, -50%);">Type the following characters:</p>
+        <p id="LVL3CHARACTERS" style="position: absolute; top: 48%; left: 60%; transform: translate(-50%,-50%); letter-spacing: 5px;">______</p>
+        <input id="LVL3INPUT" style="position: absolute; top: 57%; left: 60%; transform: translate(-50%, -50%); width: fit-content; border: 1px; border-style: solid; border-radius: 8px;">
+        <button id="LVL3SUMBIT" style="background-color: cyan; position: absolute; top: 60%; left: 50%; border: 1px; border-style: solid; border-radius: 8px;">Sumbit</button>
     </div>
 
     <h1 style="
     font-family: Arial, Helvetica, sans-serif; 
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     position: absolute; 
     justify-content: center; 
     align-content: center; 
@@ -49,7 +64,19 @@
         const lvl2txt = document.getElementById("LVL2TXT")
         const lvl2characters = document.getElementById("LVL2CHARACTERS")
         const lvl2btn = document.getElementById("LVL2SUMBIT")
-        const lvl2INPUT = document.getElementById("LVL2INPUT")
+        const lvl2input = document.getElementById("LVL2INPUT")
+        const lvl3 = document.getElementById("Level3DoubleCaptcha")
+        const lvl3name = document.getElementById("LVL3NAME")
+        const lvl3captcha1 = document.getElementById("LVL3CaptchaLogo1")
+        const lvl3captcha2 = document.getElementById("LVL3CaptchaLogo2")
+        const lvl3txt1 = document.getElementById("LVL3TXT1")
+        const lvl3checkbox = document.getElementById("LVL3CHECKBOX")
+        const lvl3txt2 = document.getElementById("LVL3TXT2")
+        const lvl3characters = document.getElementById("LVL3CHARACTERS")
+        const lvl3input = document.getElementById("LVL3INPUT")
+        const lvl3btn = document.getElementById("LVL3SUMBIT")
+
+        
 
         function victoryShow() {
             victory.style.opacity = "1"
@@ -58,20 +85,39 @@
         function hideLVL(level) {
             if (level === 1) {
                 lvl1.style.opacity = "0"
+                setTimeout(() => {
+                    lvl1.style.display = "none"
+                }, 500);
             } else if (level === 2) {
                 lvl2.style.opacity = "0"
+                setTimeout(() => {
+                    lvl2.style.display = "none"
+                }, 500);
+            } else if (level === 3) {
+                lvl3.style.opacity = "0"
+                setTimeout(() => {
+                    lvl3.style.display = "none"
+                }, 500);
             }
         }
 
         function showLVL(level) {
             if (level === 1) {
+                lvl1.style.display = "flex"
                 setTimeout(() => {
                     lvl1.style.opacity = "1"
                 }, 500);
             } else if (level === 2) {
+                lvl2.style.display = "flex"
                 setTimeout(() => {
                     lvl2.style.opacity = "1"
                 }, 500);
+            } else if (level === 3) {
+                lvl3.style.display = "flex"
+                setTimeout(() => {
+                    lvl3.style.opacity = "1"
+                }, 500);
+                
             }
         }
 
@@ -86,6 +132,9 @@
 
             return result
         }
+
+        const randomString = getRandomString(6)
+        const lvl3randomString = getRandomString(6)
 
         function hideVictory() {
             victory.style.opacity = "0"
@@ -104,7 +153,7 @@
                 }, 1500);
 
                 setTimeout(() => {
-                    lvl2characters.textContent = getRandomString(6)
+                    lvl2characters.textContent = randomString
                     showLVL(2)
                 }, 2000);
 
@@ -113,7 +162,8 @@
         })
 
         lvl2btn.addEventListener("click", function() {
-            if (lvl2characters.textContent === lvl2INPUT.value) {
+            console.log("Clicked level 2 sumbit.")
+            if (lvl2characters.textContent === lvl2input.value) {
                 hideLVL(2)
                 setTimeout(() => {
                     victoryShow()
@@ -122,10 +172,37 @@
                 setTimeout(() => {
                     hideVictory()
                 }, 1500);
+
+                setTimeout(() => {
+                    lvl3characters.textContent = lvl3randomString
+                    showLVL(3)
+                }, 2000);
+            }
+        })
+
+        lvl3btn.addEventListener("click", function () {
+            console.log("Clicked level 3 sumbit.")
+            if (!lvl3checkbox.checked) {
+                alert("Please check the checkbox.")
+                return
+            }
+
+            if (lvl3input.value === lvl3randomString) {
+                hideLVL(3)
+                setTimeout(() => {
+                    victoryShow()
+                }, 500);
+
+                setTimeout(() => {
+                    hideVictory()
+                }, 1500);
+
+                setTimeout(() => {
+                    showLVL(4)
+                }, 2000);
             }
         })
         
     </script>
 </body>
-
 </html>
